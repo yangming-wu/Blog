@@ -1,0 +1,328 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.head-container {
+    margin:0 auto;
+    width: 100% !important;
+    background-color: #584D4D;
+}
+
+.head-container::before { 
+    background: #000 linear-gradient(to left, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55); 
+    content: ""; 
+    height: 5px; 
+    position: absolute; 
+    top: 0; 
+    width: 100% !important;
+    z-index:15; 
+}
+
+.blog{
+    display:inline-block;
+    float: left;
+    color:white;
+    line-height:50px;
+    font-size:16px;
+    margin-left:80px;
+    margin-right:20px;
+}
+
+
+/* general styles */
+.menu, .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    height: 55px;
+}
+
+.menu li {
+    background: -moz-linear-gradient(#584D4D, #554B4B);
+    background: -ms-linear-gradient(#584D4D, #554B4B);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #584D4D), color-stop(100%, #554B4B));
+    background: -webkit-linear-gradient(#584D4D, #554B4B);
+    background: -o-linear-gradient(#584D4D, #554B4B);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#584D4D', endColorstr='#554B4B');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#584D4D', endColorstr='#554B4B')";
+    background: linear-gradient(#584D4D, #554B4B);
+
+    min-width: 120px;
+}
+
+.menu > li {
+    display: block;
+    float: left;
+    position: relative;
+    text-align:center;
+}
+
+.menu span {
+    /* border-left: 3px solid rgba(0, 0, 0, 0); */
+    color: white;
+    display: block;
+    font-family: 'Lucida Console';
+    font-size: 16px;
+    line-height: 55px;
+    text-decoration: none !important;
+    /* text-transform: uppercase; 小写字母转换为大写字母 */
+}
+
+/* onhover styles */
+.menu li:hover {
+    background-color: red;
+    background: -moz-linear-gradient(#FF0000, 	#FF4500);
+    background: -ms-linear-gradient(#FF0000, #FF4500);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FF0000), color-stop(100%, #FF4500));
+    background: -webkit-linear-gradient(#FF0000, #FF4500);
+    background: -o-linear-gradient(#FF0000, #FF4500);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0000', endColorstr='#FF4500');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0000', endColorstr='#FF4500')";
+    background: linear-gradient(#FF0000, #FF4500);
+}
+.menu li:hover > span {
+    color: white;
+    cursor: pointer; 
+}
+
+/* submenu styles */
+.submenu {
+    left: 0;
+    max-height: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -ms-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+.submenu li {
+    opacity: 0;
+
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+}
+
+.menu .submenu li:hover span {
+    border-radius: 0;
+    color: #ffffff;
+}
+
+.menu > li:hover .submenu, .menu > li:focus .submenu {
+    max-height: 2000px;
+    z-index: 10;
+}
+
+.menu > li:hover .submenu li, .menu > li:focus .submenu li {
+    opacity: 1;
+
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+/* CSS3 delays for transition effects */
+.menu li:hover .submenu li:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.menu li:hover .submenu li:nth-child(2) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    -ms-transition-delay: 50ms;
+    -o-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+
+.menu li:hover .submenu li:nth-child(3) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.menu li:hover .submenu li:nth-child(4) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms;
+}
+
+.menu li:hover .submenu li:nth-child(5) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.menu li:hover .submenu li:nth-child(6) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    -ms-transition-delay: 250ms;
+    -o-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+
+.menu li:hover .submenu li:nth-child(7) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.menu li:hover .submenu li:nth-child(8) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    -ms-transition-delay: 350ms;
+    -o-transition-delay: 350ms;
+    transition-delay: 350ms;
+}
+
+.submenu li:nth-child(1) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    -ms-transition-delay: 350ms;
+    -o-transition-delay: 350ms;
+    transition-delay: 350ms;
+}
+
+.submenu li:nth-child(2) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.submenu li:nth-child(3) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    -ms-transition-delay: 250ms;
+    -o-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+
+.submenu li:nth-child(4) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.submenu li:nth-child(5) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms;
+}
+
+.submenu li:nth-child(6) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.submenu li:nth-child(7) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    -ms-transition-delay: 50ms;
+    -o-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+
+.submenu li:nth-child(8) {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+/* 页脚部分 */
+footer { 
+    background: #373D41;
+    width: 100%; 
+    border-top: #00C1DE 10px solid; 
+    padding: 30px 0; 
+    color: #73777a; 
+    font-size: 12px; 
+}
+
+.box { 
+    width: 1200px; 
+    margin: auto; 
+    overflow: hidden;
+}
+
+.wxbox { 
+    overflow: hidden; 
+    float: left; 
+    margin-right: 20px 
+}
+
+.wxbox li { 
+    float: left; 
+    margin: 0 10px; 
+    text-align: center 
+}
+
+.wxbox img { 
+    height: 80px 
+}
+
+.endnav b { 
+    font-size: 14px; 
+    color: #00c1de; 
+}
+
+.endnav p { 
+    margin-bottom: 5px 
+}
+
+footer a { 
+    color: #73777a; 
+}
+
+footer a:hover { 
+    color: #00C1DE 
+}
+
+.top { 
+    width: 40px; 
+    height: 40px; 
+    display: block; 
+    background: url(../../img/Home/top.png) no-repeat center #000; 
+    right: 20px; bottom: 10%; 
+    position: fixed 
+}
